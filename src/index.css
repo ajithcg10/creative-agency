@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Montserrat */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Kanit */
+@font-face {
+  font-family: "Kanit";
+  src: url("/assets/fonts/Kanit-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kanit";
+  src: url("/assets/fonts/Kanit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Sora */
+@font-face {
+  font-family: "Sora";
+  src: url("/assets/fonts/Sora-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("/assets/fonts/Sora-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+/* Custom Background Components */
+@layer components {
+  .hero-base {
+    @apply bg-center bg-no-repeat  bg-cover;
+  }
+
+  /* Additional styling from the CSS */
+  .hero-overlay {
+    @apply relative;
+  }
+
+  .hero-overlay::before {
+    content: "";
+    @apply absolute inset-0 bg-black opacity-90;
+  }
+
+  .hero-rounded {
+    @apply rounded-t-[50px];
+  }
+
+  .hero-padding {
+    @apply pt-44 pb-72 px-4;
+  }
+
+  /* Specific background images */
+  .bg-services-hero {
+    background-image: url("/assets/images/services_bg.webp");
+  }
+}
